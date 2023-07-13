@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N-Queens Visualiser</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="app.css">
+
+    <script src="https://kit.fontawesome.com/f2f5312071.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>
+        <span class="blue">N</span><span class="red">-</span><span class="blue">Q</span><span class="red">U</span><span
+            class="blue">E</span><span class="red">E</span><span class="blue">N</span><span class="red">S</span>
+        &nbsp;
+        <span class="blue">V</span><span class="red">I</span><span class="blue">S</span><span class="red">U</span><span
+            class="blue">A</span><span class="red">L</span><span class="blue">I</span><span class="red">S</span><span
+            class="blue">E</span><span class="red">R</span>
+        &nbsp;
+        <i class="fa-solid fa-crown blue"></i>
+    </h1>
+
+    <div class="user-input">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <select class="number-box form-select form-select" required>
+                        <option selected>Select number of Queens</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center">
+                <label for="slider" class="form-label">Simulation Speed</label>
+                <div class="col-1">
+                    SLOW
+                </div>
+                <div class="col-4">
+                    <input type="range" class="slider form-range" id="slider" min="0" max="100">
+                </div>
+                <div class="col-1">
+                    FAST
+                </div>
+            </div>
+        </div>
+
+        <button class="play-button"><i class="fa-solid fa-circle-play"></i> Play</button>
+        <button class="abort-button"><i class="fa-solid fa-ban"></i> Abort</button>
+    </div>
+
+    <div class="n-queen-arrangements"></div>
+    <div class="n-queen-board container"></div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
