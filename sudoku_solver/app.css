@@ -1,13 +1,12 @@
 body {
-    font-family: sans-serif;
     text-align: center;
-    padding: 20px;
+    padding: 40px;
 }
 
 h1 {
     font-size: 3em;
     font-weight: 800;
-    padding-bottom: 20px;
+    padding: 30px 0;
 }
 
 .blue {
@@ -33,6 +32,7 @@ table {
     border-collapse: collapse;
     font-size: 2em;
     margin: 0 auto;
+    margin-top: 30px;
 }
 
 colgroup, tbody {
@@ -52,20 +52,20 @@ td {
 
 #solve, #clear {
     margin: 1em;
-    padding: 10px;
-    border-radius: 1em;
+    padding: 10px 30px;
+    border-radius: 20px;
     font-weight: 800;
+    font-size: 1.2em;
     transition: all 200ms;
+    background-color: white;
 }
 
 #solve {
-    background-color: white;
     border: 3px solid #4361ee;
     color: #4361ee;
 }
 
 #clear {
-    background-color: white;
     border: 3px solid #f72585;
     color: #f72585;
 }

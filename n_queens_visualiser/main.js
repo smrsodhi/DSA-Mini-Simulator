@@ -1,3 +1,4 @@
+// INITIAL LOGIC
 const numberBox = document.querySelector('.number-box');
 const slider = document.querySelector('.slider');
 
@@ -19,6 +20,71 @@ slider.addEventListener('input', function () {
     speed = (100 - this.value) * 10;
 });
 
+playButton.addEventListener('click', async function () {
+    n = numberBox.value;
+
+    if (n === "Select number of Queens") {
+        alert("Please select number of Queens!");
+        return;
+    }
+
+    arrangements.innerHTML = "";
+    chessBoard.innerHTML = "";
+
+    const p = document.createElement('p');
+    p.innerText = `Arrangements possible: ${numOfArrangements[n]}`;
+    p.classList.add('queen-info');
+    arrangements.appendChild(p);
+
+    q = new Queen();
+    if (chessBoard.childElementCount === 0) {
+        for (let i = 0; i <= numOfArrangements[n]; i++) {
+            q.uuid.push(i);
+
+            const div = document.createElement('div');
+            div.classList.add('arrangement-card');
+
+            const header = document.createElement('h4');
+            const table = document.createElement('table');
+
+            header.innerText = `Arrangement ${i + 1}`;
+
+            table.id = `table-${q.uuid[i]}`;
+            header.id = `paragraph-${i}`;
+
+            div.appendChild(header);
+            div.appendChild(table);
+            chessBoard.appendChild(div);
+        }
+    }
+
+    for (let k = 0; k <= numOfArrangements[n]; k++) {
+        const table = document.querySelector(`#table-${q.uuid[k]}`);
+
+        for (let i = 0; i < n; i++) {
+            const row = table.insertRow(i);
+            row.id = `Row${i}`;
+
+            for (let j = 0; j < n; j++) {
+                const col = row.insertCell(j);
+                col.innerHTML = "-";
+            }
+        }
+
+        await q.clearColor(k);
+    }
+
+    await q.nQueen();
+});
+
+abortButton.addEventListener('click', function () {
+    arrangements.innerHTML = "";
+    chessBoard.innerHTML = "";
+    this.disabled = true;
+    numberBox.disabled = false;
+});
+
+// ACTUAL CLASS FOR N-QUEENS LOGIC
 class Queen {
     constructor() {
         this.position = {};
@@ -163,67 +229,3 @@ class Queen {
         }
     }
 }
-
-playButton.addEventListener('click', async function () {
-    n = numberBox.value;
-
-    if (n === "Select number of Queens") {
-        alert("Please select number of Queens!");
-        return;
-    }
-
-    arrangements.innerHTML = "";
-    chessBoard.innerHTML = "";
-
-    const p = document.createElement('p');
-    p.innerText = `Arrangements possible: ${numOfArrangements[n]}`;
-    p.classList.add('queen-info');
-    arrangements.appendChild(p);
-
-    q = new Queen();
-    if (chessBoard.childElementCount === 0) {
-        for (let i = 0; i <= numOfArrangements[n]; i++) {
-            q.uuid.push(i);
-
-            const div = document.createElement('div');
-            div.classList.add('arrangement-card');
-
-            const header = document.createElement('h4');
-            const table = document.createElement('table');
-
-            header.innerText = `Arrangement ${i + 1}`;
-
-            table.id = `table-${q.uuid[i]}`;
-            header.id = `paragraph-${i}`;
-
-            div.appendChild(header);
-            div.appendChild(table);
-            chessBoard.appendChild(div);
-        }
-    }
-
-    for (let k = 0; k <= numOfArrangements[n]; k++) {
-        const table = document.querySelector(`#table-${q.uuid[k]}`);
-
-        for (let i = 0; i < n; i++) {
-            const row = table.insertRow(i);
-            row.id = `Row${i}`;
-
-            for (let j = 0; j < n; j++) {
-                const col = row.insertCell(j);
-                col.innerHTML = "-";
-            }
-        }
-
-        await q.clearColor(k);
-    }
-
-    await q.nQueen();
-});
-
-abortButton.addEventListener('click', function () {
-    arrangements.innerHTML = "";
-    chessBoard.innerHTML = "";
-    this.disabled = true;
-    numberBox.disabled = false;
-})
