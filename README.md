@@ -1,1 +1,1 @@
-# DSA-Concepts-Visualiser
+# DSA-Mini-Simulator
