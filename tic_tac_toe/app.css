@@ -1,0 +1,116 @@
+body {
+    text-align: center;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 800;
+    padding: 30px 0;
+}
+
+.blue {
+    color: #4361ee;
+    transition: all 200ms;
+}
+
+.red {
+    color: #f72585;
+    transition: all 200ms;
+}
+
+h1:hover {
+    .blue {
+        color: #f72585;
+    }
+    .red {
+        color: #4361ee;
+    }
+}
+
+.choice, .result {
+    font-size: 20px;
+}
+
+.buttons {
+    padding: 20px;
+}
+
+button {
+    margin: 0.5em 1em;
+    padding: 10px 50px;
+    border-radius: 1em;
+    font-size: 1.2em;
+    font-weight: 800;
+    transition: all 200ms;
+    background-color: white;
+}
+
+.start-x {
+    border: 3px solid #4361ee;
+    color: #4361ee;
+}
+
+.start-x:hover:enabled {
+    background-color: #4361ee;
+    color: white;
+    cursor: pointer;
+}
+
+.start-x:disabled {
+    border: 3px solid #4361ee85;
+    color: #4361ee85;
+}
+
+.start-o {
+    border: 3px solid #f72585;
+    color: #f72585;
+}
+
+.start-o:hover:enabled {
+    background-color: #f72585;
+    color: white;
+    cursor: pointer;
+}
+
+.start-o:disabled {
+    border: 3px solid #f7258585;
+    color: #f7258585;
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 4em;
+    margin: 0.5em auto;
+}
+  
+td {
+    border: solid thick lightslategray;
+    height: 2em;
+    width: 2em;
+    padding: 0;
+}
+
+.up {
+    border-top: none;
+}
+
+.down {
+    border-bottom: none;
+}
+
+.left {
+    border-left: none;
+}
+
+.right {
+    border-right: none;
+}
+
+.always-blue {
+    color: #4361ee;
+}
+
+.always-red {
+    color: #f72585;
+}

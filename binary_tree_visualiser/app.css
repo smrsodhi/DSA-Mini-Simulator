@@ -1,0 +1,102 @@
+body {
+    text-align: center;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 800;
+    padding: 30px 0;
+}
+
+.blue {
+    color: #4361ee;
+    transition: all 200ms;
+}
+
+.red {
+    color: #f72585;
+    transition: all 200ms;
+}
+
+h1:hover {
+    .blue {
+        color: #f72585;
+    }
+
+    .red {
+        color: #4361ee;
+    }
+}
+
+button {
+    margin: 1em;
+    padding: 10px 30px;
+    border-radius: 1em;
+    font-size: 1.2em;
+    font-weight: 800;
+    transition: all 200ms;
+    background-color: white;
+}
+
+.complete-bt {
+    border: 3px solid #4361ee;
+    color: #4361ee;
+}
+
+.complete-bt:hover {
+    background-color: #4361ee;
+    color: white;
+    cursor: pointer;
+}
+
+.max-heap {
+    border: 3px solid #fb8500;
+    color: #fb8500;
+}
+
+.max-heap:hover {
+    background-color: #fb8500;
+    color: white;
+    cursor: pointer;
+}
+
+.bst {
+    border: 3px solid #f72585;
+    color: #f72585;
+}
+
+.bst:hover {
+    background-color: #f72585;
+    color: white;
+    cursor: pointer;
+}
+
+.option-title {
+    margin: 20px;
+    font-size: 2em;
+}
+
+.instructions {
+    width: 80%;
+    font-size: 1.2em;
+}
+
+.tree {
+    display: flex;
+    justify-content: center;
+}
+
+.node {
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leaf {
+    background-color: #f0f0f0;
+}
