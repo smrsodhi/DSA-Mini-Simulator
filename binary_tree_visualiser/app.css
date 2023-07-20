@@ -78,25 +78,19 @@ button {
 }
 
 .instructions {
+    padding-bottom: 50px;
     width: 80%;
     font-size: 1.2em;
 }
 
-.tree {
-    display: flex;
-    justify-content: center;
-}
-
 .node {
-    border: 1px solid #000;
+    padding: 1em 1.2em;
+    background-color: #1e6091;
+    color: white;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 1.5em;
 }
 
-.leaf {
-    background-color: #f0f0f0;
+.level {
+    padding: 50px;
 }
