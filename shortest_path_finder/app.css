@@ -1,6 +1,10 @@
 body {
     text-align: center;
-    padding: 40px;
+}
+
+.navbar {
+    padding: 10px 40px;
+    margin-bottom: 40px;
 }
 
 h1 {
@@ -35,7 +39,8 @@ table {
 }
 
 td {
-    background-color: black;
+    border: solid thin;
+    background-color: white;
     border-radius: 20px;
     height: 0.8em;
     width: 0.8em;
@@ -59,12 +64,6 @@ button {
 .play-button {
     border: 3px solid #4361ee;
     color: #4361ee;
-}
-
-.play-button:hover:enabled {
-    background-color: #4361ee;
-    color: white;
-    cursor: pointer;
 }
 
 .play-button:disabled {
@@ -96,22 +95,26 @@ button {
 }
 
 .wall {
-    background-color: white;
+    background-color: black;
 }
 
 .node-start {
+    border: solid thin #4361ee;
     background-color: #4361ee;
 }
 
 .node-end {
+    border: solid thin #f72585;
     background-color: #f72585;
 }
 
 .node-visited {
+    border: solid thin #ffbe0b;
     background-color: #ffbe0b;
 }
 
 .node-shortest-path {
+    border: solid thin #00f5d4;
     background-color: #00f5d4;
 }
 

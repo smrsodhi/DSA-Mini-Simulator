@@ -1,0 +1,88 @@
+body {
+    padding: 70px 40px;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 70px;
+    font-size: 4.5em;
+    font-weight: 600;
+    color: #22223b;
+}
+
+p {
+    font-size: 1.5em;
+    font-weight: 500;
+    padding-bottom: 70px;
+    color: #4a4e69;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 30px;
+    border-radius: 2em;
+    font-size: 1.2em;
+    font-weight: 800;
+    transition: all 200ms;
+    background-color: white;
+}
+
+.sudoku-solver {
+    border: 3px solid #3f37c9;
+    color: #3f37c9;
+}
+
+.sudoku-solver:hover {
+    background-color: #3f37c9;
+    color: white;
+    cursor: pointer;
+}
+
+.shortest-path-finder {
+    border: 3px solid #4361ee;
+    color: #4361ee;
+}
+
+.shortest-path-finder:hover {
+    background-color: #4361ee;
+    color: white;
+    cursor: pointer;
+}
+
+.tic-tac-toe {
+    border: 3px solid #5e81e9;
+    color: #5e81e9;
+}
+
+.tic-tac-toe:hover {
+    background-color: #5e81e9;
+    color: white;
+    cursor: pointer;
+}
+
+.n-queens-visualiser {
+    border: 3px solid #fb6f92;
+    color: #fb6f92;
+}
+
+.n-queens-visualiser:hover {
+    background-color: #fb6f92;
+    color: white;
+    cursor: pointer;
+}
+
+.binary-tree-visualiser {
+    border: 3px solid #f72585;
+    color: #f72585;
+}
+
+.binary-tree-visualiser:hover {
+    background-color: #f72585;
+    color: white;
+    cursor: pointer;
+}
+
+img {
+    padding-top: 30px;
+    width: 100%;
+}
