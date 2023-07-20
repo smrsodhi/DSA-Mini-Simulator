@@ -14,17 +14,19 @@ let board = [
     ['', '', ''],
 ];
 
-let moveIndex = 0, whoseTurn;
+let moveIndex, whoseTurn;
 let COMPUTERMOVE, HUMANMOVE;
 
 xButton.addEventListener('click', function () {
     xButton.disabled = true;
     oButton.disabled = true;
-
-    initialiseBoard();
+    
     whoseTurn = HUMAN;
     COMPUTERMOVE = O;
     HUMANMOVE = X;
+
+    moveIndex = 0;
+    initialiseBoard();
     showBoard();
 
     cells.forEach(function (cell) {
@@ -36,10 +38,12 @@ oButton.addEventListener('click', function () {
     xButton.disabled = true;
     oButton.disabled = true;
 
-    initialiseBoard();
     whoseTurn = COMPUTER;
     COMPUTERMOVE = X;
     HUMANMOVE = O;
+
+    moveIndex = 0;
+    initialiseBoard();
     showBoard();
 
     const { x: compX, y: compY } = bestMove(moveIndex);
@@ -219,5 +223,3 @@ function diagonalCrossed() {
     }
     return false;
 }
-
-
